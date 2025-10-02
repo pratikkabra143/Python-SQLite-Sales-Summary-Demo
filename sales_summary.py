@@ -15,4 +15,10 @@ df = pd.read_sql_query(query, conn)
 
 print(df)
 
-wait = input("Press Enter to continue...")
+df.plot(kind="bar", x="product", y="revenue", legend=False)
+plt.title("Revenue by Product")
+plt.xlabel("Product")
+plt.ylabel("Revenue")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
